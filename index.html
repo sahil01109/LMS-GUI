@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LMS: Library Management System GUI</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+ 
+<header>
+    <h1>Library Management System</h1>
+    <nav class="navbar">
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#books">Books</a></li>
+            <li><a href="#members">Members</a></li>
+            <li><a href="#loans">Loans</a></li>
+        </ul>
+         <a href="#logout" class="logout-btn">Logout</a>
+        <button class="nav-toggle" aria-label="Toggle navigation">&#9776;</button>
+    </nav>
+</header>
+
+    <main>
+        <section id="home">
+            <h2>Welcome to the Library Management System</h2>
+            <p>Manage your library efficiently with our user-friendly interface.</p>
+        </section>
+   
+<section id="books">
+    <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:18px;">
+        <h2 style="margin:0;">Books</h2>
+        <button style="padding:12px 24px;background:#4f8cff;color:#fff;border:none;border-radius:8px;font-size:1em;cursor:pointer;box-shadow:0 2px 8px rgba(79,140,255,0.10);transition:background 0.2s;">
+            + Add New Book
+        </button>
+    </div>
+    <div class="book-list">
+        <div class="card">
+            <h3>The Great Gatsby</h3>
+            <p><strong>Author:</strong> F. Scott Fitzgerald</p>
+            <p><strong>ISBN:</strong> 9780743273565</p>
+        </div>
+        <div class="card">
+            <h3>1984</h3>
+            <p><strong>Author:</strong> George Orwell</p>
+            <p><strong>ISBN:</strong> 9780451524935</p>
+        </div>
+        <div class="card">
+            <h3>To Kill a Mockingbird</h3>
+            <p><strong>Author:</strong> Harper Lee</p>
+            <p><strong>ISBN:</strong> 9780061120084</p>
+        </div>
+      
+    </div>
+    <div style="text-align:right;">
+        <a href="#books" style="color:#4f8cff; font-weight:500; text-decoration:underline; cursor:pointer;">More</a>
+    </div>
+</section>
+<section id="members">
+   <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:18px;">
+        <h2 style="margin:0;">Member</h2>
+        <button style="padding:12px 24px;background:#4f8cff;color:#fff;border:none;border-radius:8px;font-size:1em;cursor:pointer;box-shadow:0 2px 8px rgba(79,140,255,0.10);transition:background 0.2s;">
+            + Add New Member
+        </button>
+    </div>
+    <div class="member-list">
+        <div class="card">
+            <h3>Priya Sharma</h3>
+            <p><strong>Member ID:</strong> M001</p>
+            <p><strong>Status:</strong> <span style="color:green;font-weight:bold;">Active</span></p>
+        </div>
+        <div class="card">
+            <h3>Rahul Verma</h3>
+            <p><strong>Member ID:</strong> M002</p>
+            <p><strong>Status:</strong> <span style="color:green;font-weight:bold;">Active</span></p>
+        </div>
+        <div class="card">
+            <h3>Anjali Singh</h3>
+            <p><strong>Member ID:</strong> M003</p>
+            <p><strong>Status:</strong> <span style="color:red;font-weight:bold;">Deactive</span></p>
+        </div>
+    </div>
+     <div style="text-align:right;">
+        <a href="#members" style="color:#4f8cff; font-weight:500; text-decoration:underline; cursor:pointer;">More</a>
+    </div>
+</section>
+
+<section id="loans">
+   <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:18px;">
+        <h2 style="margin:0;">Loans</h2>
+        <button style="padding:12px 24px;background:#4f8cff;color:#fff;border:none;border-radius:8px;font-size:1em;cursor:pointer;box-shadow:0 2px 8px rgba(79,140,255,0.10);transition:background 0.2s;">
+            + Add New 
+        </button>
+    </div>
+    <div class="loan-list">
+        <div class="card">
+            <h3>Loan #1</h3>
+            <p><strong>Student ID:</strong> M001</p>
+            <p><strong>Book ISBN:</strong> 9780743273565</p>
+            <p><strong>Issue Date:</strong> 2025-06-01</p>
+            <p><strong>Due Date:</strong> 2025-06-15</p>
+            <p><strong>Status:</strong> <span style="color:green;font-weight:bold;">Returned</span></p>
+        </div>
+        <div class="card">
+            <h3>Loan #2</h3>
+            <p><strong>Student ID:</strong> M002</p>
+            <p><strong>Book ISBN:</strong> 9780451524935</p>
+            <p><strong>Issue Date:</strong> 2025-06-10</p>
+            <p><strong>Due Date:</strong> 2025-06-24</p>
+            <p><strong>Status:</strong> <span style="color:orange;font-weight:bold;">Pending</span></p>
+        </div>
+        <div class="card">
+            <h3>Loan #3</h3>
+            <p><strong>Student ID:</strong> M003</p>
+            <p><strong>Book ISBN:</strong> 9780061120084</p>
+            <p><strong>Issue Date:</strong> 2025-06-15</p>
+            <p><strong>Due Date:</strong> 2025-06-29</p>
+            <p><strong>Status:</strong> <span style="color:red;font-weight:bold;">Overdue</span></p>
+        </div>
+    </div>
+    <div style="text-align:right;">
+        <a href="#loans" style="color:#4f8cff; font-weight:500; text-decoration:underline; cursor:pointer;">More</a>
+    </div>
+</section>
+    </main>
+    <footer>
+        <p>&copy; 2023 Library Management System. All rights reserved.</p>
+    </footer>
+    <script>
+document.addEventListener('DOMContentLoaded', function () {
+    const navToggle = document.querySelector('.nav-toggle');
+    const navList = document.querySelector('nav.navbar ul');
+    navToggle.addEventListener('click', function () {
+        navList.classList.toggle('active');
+    });
+});
+</script>
+</body>
+</html>
