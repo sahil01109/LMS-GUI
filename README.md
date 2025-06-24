@@ -8,8 +8,7 @@ The Library Management System GUI is a web-based application designed to facilit
 library-management-system-gui
 ├── index.html        # Main HTML document
 ├── style.css         # Styles for the GUI
-├── scripts
-│   └── app.js        # JavaScript for dynamic features
+├── scripts       # JavaScript for dynamic features Embedded in html file
 └── README.md         # Project documentation
 ```
 
